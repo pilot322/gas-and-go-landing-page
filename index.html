@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="output.css" rel="stylesheet">
+    <title>Tailwind Landing Page</title>
+</head>
+
+<body class="bg-black flex items-center justify-center min-h-screen">
+    <h1 class="header">Gas and Go</h1>
+    <div class="p-10 rounded-lg shadow-lg text-center">
+        <div class="rev-meter" id="revMeter"></di>
+        <div class="flex text-white text-center space-x-5 mb-10">
+            <h1 class="rev-text" id="fuel">Fuel</h1>
+            <h1 class="rev-text" id="your">your</h1>
+            <h1 class="rev-text" id="day">day!</h1>
+        </div>
+        <div class="flex justify-center space-x-6">
+            <!-- TikTok Button -->
+            <a href="https://www.tiktok.com" target="_blank"
+                class="bg-gray-800 hover:bg-gray-700 text-white hover:text-purple-400 w-14 h-14 flex items-center justify-center rounded-full shadow-lg transition-all duration-300 animate-float-curved1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                    <path
+                        d="M16 8c1.6 1 3.2 1.6 5 1.7v3.2a9 9 0 0 1-5.3-1.7v5.6a6.9 6.9 0 0 1-2 4.7 7 7 0 0 1-5 2 7 7 0 0 1-5-2 6.8 6.8 0 0 1 0-9.7 7 7 0 0 1 5-2c.3 0 .6 0 1 .1v3.3h-.6a3.5 3.5 0 1 0 0 7 3.6 3.6 0 0 0 3.5-3.5V2h3.3a5 5 0 0 0 1.8 3.4A5 5 0 0 0 20 6.5V8h-4z" />
+                </svg>
+            </a>
+
+            <!-- Instagram Button -->
+            <a href="https://www.instagram.com" target="_blank"
+                class="bg-gray-800 hover:bg-gray-700 text-white hover:text-pink-400 w-14 h-14 flex items-center justify-center rounded-full shadow-lg transition-all duration-300 animate-float-curved2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                    <path
+                        d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0-2a7 7 0 0 0-7 7v10a7 7 0 0 0 7 7h10a7 7 0 0 0 7-7V7a7 7 0 0 0-7-7H7zm5 6a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm6-4a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                </svg>
+            </a>
+
+            <a href="https://www.google.com/maps" target="_blank"
+                class="bg-gray-800 hover:bg-gray-700 hover:text-green-500 text-white w-14 h-14 flex items-center justify-center rounded-full shadow-lg transition-all duration-300 animate-float-curved3"">
+                <svg xmlns=" http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                    d="M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.7 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" />
+                </svg>
+            </a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
