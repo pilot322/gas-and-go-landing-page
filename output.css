@@ -578,6 +578,10 @@ video {
   display: flex;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-14 {
   height: 3.5rem;
 }
@@ -857,7 +861,6 @@ body {
   font-weight: bold;
   color: #fff;
   padding: 1rem;
-  background: rgba(0, 0, 0, 0.7);
   width: 100%;
   text-align: center;
   z-index: 10;
@@ -928,7 +931,7 @@ body {
   transition: all 1000ms;
 }
 
-#needle {
+#needle-1 {
   transform-origin: 206px 340px;
   /* Set the center point for rotation */
   transform: rotate(62deg);
@@ -936,8 +939,39 @@ body {
   /* Smooth rotation */
 }
 
-.strkbig {
-  stroke-width: 5px;
+#needle-2 {
+  transform-origin: 206px 340px;
+  /* Set the center point for rotation */
+  transform: rotate(-160deg);
+  transition: transform 1500ms cubic-bezier(.47,.09,.67,1.02);
+  /* Smooth rotation */
+}
+
+@keyframes needle_jitter {
+  0% {
+    transform: rotate(90deg);
+  }
+
+  25% {
+    transform: rotate(88deg);
+  }
+
+  50% {
+    transform: rotate(92deg);
+  }
+
+  75% {
+    transform: rotate(89deg);
+  }
+
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+#needle-2.needle_jitter {
+  animation: needle_jitter 0.1s linear infinite;
+  /* Run the animation for 0.5s, 3 times */
 }
 
 .hover\:bg-gray-700:hover {

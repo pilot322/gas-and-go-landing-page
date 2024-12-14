@@ -1,4 +1,5 @@
-const initial_offset_ms = 2300;
+const initial_blank_offset_ms = 1000;
+const initial_offset_ms = 2300 + initial_blank_offset_ms;
 
 document.addEventListener('DOMContentLoaded', () => {
     const lights = document.querySelectorAll('.light');
@@ -9,24 +10,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const button2 = document.getElementById('instagram');
     const button3 = document.getElementById('maps');
 
-    const needle = document.getElementById('needle');
+    const needle_1 = document.getElementById('needle-1');
     const rev_gauge_container = document.getElementById('rev-gauge-container');
-    const rev_needle = document.getElementById('needle2');
+    const needle_2 = document.getElementById('needle-2');
     const rev_needle_container = document.getElementById('rev-gauge-needle-container');
     const fuelgaugecontainer = document.getElementById('fuel-gauge-container');
    
     const header = document.getElementById('header');
+    
+    function rotateneedle(degrees) {
+        needle_1.style.transform = `rotate(${degrees}deg)`;
+    };
 
-    fuelgaugecontainer.classList.add('show');
-    // fuelgaugecontainer.classList.remove('hidden'); 
-    
-    function rotateNeedle(degrees) {
-        needle.style.transform = `rotate(${degrees}deg)`;
-    }
-    
+    function rotateneedle2(degrees) {
+        needle_2.style.transform = `rotate(${degrees}deg)`;
+    };
+
     setTimeout(() => {
-        rotateNeedle(62-87);
-    }, 0);
+        fuelgaugecontainer.classList.add('show');
+        rotateneedle(62-87);
+    }, initial_blank_offset_ms);
+    
+    
    
 
     setTimeout(() => {
@@ -65,16 +70,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     rev_needle_container.classList.add('jitter');
                     rev_gauge_container.classList.add('jitter');
+                    rotateneedle2(-160+250);
                 }
             }, index * 1000 + initial_offset_ms); // Lights animate one by one every 1 second
         });
     }
+    needle_2.addEventListener('transitionend', () => {
+         needle_2.classList.add('needle_jitter');
+    }, { once: true }); 
+
     setTimeout(()=>{
         button1.classList.remove('opacity-0');
         button2.classList.remove('opacity-0');
         button3.classList.remove('opacity-0');
         header.classList.add('show'); 
-    }, initial_offset_ms + 5500);
+    }, initial_offset_ms + 6500);
     startLightsAnimation();
 });
 
