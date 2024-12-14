@@ -209,7 +209,8 @@ body {
     transform-origin: 206px 340px;
     /* Set the center point for rotation */
     transform: rotate(-160deg);
-    transition: transform 1500ms cubic-bezier(.47,.09,.67,1.02);
+/*    transition: transform 1500ms cubic-bezier(.47,.09,.67,1.02);*/
+    transition: transform 1500ms cubic-bezier(.24,.39,.73,-0.29);
 
     /* Smooth rotation */
 }

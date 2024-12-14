@@ -58,6 +58,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else if (index === 3) {
                     yourText.classList.remove('opacity-0');
                     
+                    rev_needle_container.classList.add('jitter');
+                    rev_gauge_container.classList.add('jitter');
+                    rotateneedle2(-160+250);
+                    fuelText.classList.add('jitter');
+                    yourText.classList.add('jitter');
+                    dayText.classList.add('jitter');
                     //yourText.classList.add('neon-text-'+(index-1));
                 } else if (index === 4) {
                     dayText.classList.remove('opacity-0');
@@ -65,13 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     
 
                     // Add jitter effect to the text on the final light
-                    fuelText.classList.add('jitter');
-                    yourText.classList.add('jitter');
-                    dayText.classList.add('jitter');
 
-                    rev_needle_container.classList.add('jitter');
-                    rev_gauge_container.classList.add('jitter');
-                    rotateneedle2(-160+250);
                 }
             }, index * 1000 + initial_offset_ms); // Lights animate one by one every 1 second
         });
