@@ -141,8 +141,8 @@ body {
 }
 
 .light.active {
-    background-color: #ff2222;
-    box-shadow: 0 0 10px #ff3030, 0 0 20px #ff3030, 0 0 30px #ff3030;
+    background-color: #dc2626;
+    box-shadow: 0 0 10px #dc2626, 0 0 20px #dc2626, 0 0 30px #dc2626;
 }
 
 .neon-text-1 {
