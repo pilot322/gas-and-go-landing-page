@@ -187,8 +187,8 @@ body {
 
 .hide {
     opacity: 0;
-    transform: translateX(-3%);
-    transition: all 800ms ease-in;
+    transform: translateX(-10%);
+    transition: all 1000ms cubic-bezier(1,-0.05,.34,2.2);
 }
 
 .show {

@@ -1,4 +1,4 @@
-const initial_blank_offset_ms = 1000;
+const initial_blank_offset_ms = 2000;
 const initial_offset_ms = 2300 + initial_blank_offset_ms;
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setTimeout(() => {
         fuelgaugecontainer.classList.remove('show');
-    }, initial_offset_ms - 300);
+    }, initial_offset_ms + 550);
     
     
 
@@ -57,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                 } else if (index === 3) {
                     yourText.classList.remove('opacity-0');
+                    
                     //yourText.classList.add('neon-text-'+(index-1));
                 } else if (index === 4) {
                     dayText.classList.remove('opacity-0');

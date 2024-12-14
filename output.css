@@ -566,16 +566,12 @@ video {
   inset: 0px;
 }
 
-.mb-14 {
-  margin-bottom: 3.5rem;
+.mb-10 {
+  margin-bottom: 2.5rem;
 }
 
 .mb-16 {
   margin-bottom: 4rem;
-}
-
-.mb-10 {
-  margin-bottom: 2.5rem;
 }
 
 .flex {
@@ -703,16 +699,6 @@ video {
 .text-6xl {
   font-size: 3.75rem;
   line-height: 1;
-}
-
-.text-8xl {
-  font-size: 6rem;
-  line-height: 1;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
 }
 
 .font-bold {
@@ -934,8 +920,8 @@ body {
 
 .hide {
   opacity: 0;
-  transform: translateX(-3%);
-  transition: all 800ms ease-in;
+  transform: translateX(-10%);
+  transition: all 1000ms cubic-bezier(1,-0.05,.34,2.2);
 }
 
 .show {
