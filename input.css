@@ -6,15 +6,19 @@
     0% {
         transform: translate(0, 0);
     }
+
     20% {
         transform: translate(calc(1px * sin(30deg)), calc(2px * cos(30deg)));
     }
+
     45% {
         transform: translate(calc(-1px * sin(30deg)), calc(2px * cos(30deg)));
     }
+
     70% {
         transform: translate(calc(1px * sin(30deg)), calc(-2px * cos(30deg)));
     }
+
     100% {
         transform: translate(0, 0);
     }
@@ -24,15 +28,19 @@
     0% {
         transform: translate(0, 0);
     }
+
     25% {
         transform: translate(calc(-1px * sin(25deg)), calc(2px * cos(25deg)));
     }
+
     51% {
         transform: translate(calc(1px * sin(25deg)), calc(-2px * cos(25deg)));
     }
+
     78% {
         transform: translate(calc(-1px * sin(25deg)), calc(-2px * cos(25deg)));
     }
+
     100% {
         transform: translate(0, 0);
     }
@@ -42,15 +50,19 @@
     0% {
         transform: translate(0, 0);
     }
+
     25% {
         transform: translate(calc(1px * cos(35deg)), calc(2px * sin(35deg)));
     }
+
     55% {
         transform: translate(calc(-1px * cos(35deg)), calc(-2px * sin(35deg)));
     }
+
     80% {
         transform: translate(calc(1px * cos(35deg)), calc(-2px * sin(35deg)));
     }
+
     100% {
         transform: translate(0, 0);
     }
@@ -76,47 +88,6 @@ body {
     padding: 0;
 }
 
-/* Container for rev meter and text */
-.rev-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-/* Rev meter styling */
-.rev-meter {
-    width: 300px;
-    height: 20px;
-    background: #222;
-    border: 2px solid #555;
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 20px;
-}
-
-.rev-meter::before {
-    content: '';
-    width: 0;
-    height: 100%;
-    background: linear-gradient(to right, #4caf50, #ffeb3b, #ff5722, #f44336);
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: width 0.5s ease-in-out;
-}
-
-/* Text styling */
-.rev-text {
-    font-size: 3rem;
-    font-weight: bold;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s, transform 0.5s;
-    position: relative;
-}
-
 /* Jitter effect */
 .jitter {
     animation: jitter 0.1s infinite;
@@ -124,11 +95,25 @@ body {
 
 /* Keyframes for jitter effect */
 @keyframes jitter {
-    0% { transform: translateY(-1px) translateX(-1px); }
-    25% { transform: translateY(1px) translateX(-1px); }
-    50% { transform: translateY(-1px) translateX(1px); }
-    75% { transform: translateY(1px) translateX(1px); }
-    100% { transform: translateY(0) translateX(0); }
+    0% {
+        transform: translateY(-1px) translateX(-1px);
+    }
+
+    25% {
+        transform: translateY(1px) translateX(-1px);
+    }
+
+    50% {
+        transform: translateY(-1px) translateX(1px);
+    }
+
+    75% {
+        transform: translateY(1px) translateX(1px);
+    }
+
+    100% {
+        transform: translateY(0) translateX(0);
+    }
 }
 
 
@@ -147,3 +132,81 @@ body {
     z-index: 10;
 }
 
+.light {
+    width: 40px;
+    height: 40px;
+    background-color: #202020;
+    border-radius: 50%;
+    transition: background-color 1ms linear, box-shadow 1ms linear;
+}
+
+.light.active {
+    background-color: #ff2222;
+    box-shadow: 0 0 10px #ff3030, 0 0 20px #ff3030, 0 0 30px #ff3030;
+}
+
+.neon-text-1 {
+    text-shadow: 0 0 5px #ff4040, 0 0 10px #ff4040, 0 0 20px #ffffff, 0 0 40px #ffffff, 0 0 80px #ff4040;
+    color: #fff;
+    transition: text-shadow 1ms linear;
+}
+
+.neon-text-2 {
+    text-shadow: 0 0 5px #ffac40, 0 0 10px #ffac40, 0 0 20px #ffffff, 0 0 40px #ffffff, 0 0 80px #ffac40;
+    color: #fff;
+    transition: text-shadow 1ms linear;
+}
+
+.neon-text-3 {
+    text-shadow: 0 0 5px #40ff40, 0 0 10px #40ff40, 0 0 20px #ffffff, 0 0 40px #ffffff, 0 0 80px #40ff40;
+    color: #fff;
+    transition: text-shadow 1ms linear;
+}
+
+
+.st0 {
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+    fill: #FFFFFF;
+    text-shadow: 0 0 10px #ff3030, 0 0 20px #ff3030, 0 0 30px #ff3030;
+}
+
+.st1 {
+    fill: #FFFFFF;
+}
+
+.st2 {
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+    fill: #dc2626;
+    stroke-width: 5px;
+
+}
+
+.st3 {
+    fill: #dc2626;
+}
+
+.hide {
+    opacity: 0;
+    transform: translateX(-3%);
+    transition: all 800ms ease-in;
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 1000ms;
+}
+
+#needle {
+    transform-origin: 206px 340px;
+    /* Set the center point for rotation */
+    transform: rotate(62deg);
+    transition: transform 2s cubic-bezier(0.25, 1, 0.5, 1);
+    /* Smooth rotation */
+}
+
+.strkbig {
+    stroke-width: 5px;
+}
