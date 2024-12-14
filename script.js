@@ -83,8 +83,14 @@ document.addEventListener('DOMContentLoaded', () => {
         button1.classList.remove('opacity-0');
         button2.classList.remove('opacity-0');
         button3.classList.remove('opacity-0');
-        header.classList.add('show'); 
+        lights.forEach((light, index) => {
+            light.classList.add('hide');
+        })
     }, initial_offset_ms + 6500);
+
+    setTimeout(() =>{
+        header.classList.add('show'); 
+    }, initial_offset_ms + 7500);
     startLightsAnimation();
 });
 

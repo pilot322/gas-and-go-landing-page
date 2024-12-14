@@ -10,13 +10,15 @@
 </head>
 
 <body class="bg-black flex flex-col items-center justify-center min-h-screen">
-    <h1 id="header" class="header hide">Gas and Go</h1>
-    <div class="flex items-center justify-center space-x-8 text-white mb-14">
-        <div class="light opacity-0"></div>
-        <div class="light opacity-0 "></div>
-        <div class="light opacity-0"></div>
-        <div class="light opacity-0"></div>
-        <div class="light opacity-0"></div>
+    <div class="relative flex items-center justify-center">
+        <h1 id="header" class="header hide text-white text-6xl font-staatliches">Gas and Go</h1>
+        <div class="flex items-center justify-center space-x-8 text-white mb-10">
+            <div class="light opacity-0"></div>
+            <div class="light opacity-0 "></div>
+            <div class="light opacity-0"></div>
+            <div class="light opacity-0"></div>
+            <div class="light opacity-0"></div>
+        </div>
     </div>
     <div class="w-64 h-64 relative">
         <div class="absolute inset-0 hide flex items-center justify-center" id="fuel-gauge-container">
@@ -40,7 +42,7 @@
                 <polygon class="st1" points="357,378.6 357,352.8 376.1,352.8 376.1,357.2 362.2,357.2 362.2,362.9 375.1,362.9 375.1,367.3 
                 362.2,367.3 362.2,374.2 376.6,374.2 376.6,378.6 	" />
                 <g id="needle-1">
-    // fuelgaugecontainer.classList.remove('hidden'); 
+                    // fuelgaugecontainer.classList.remove('hidden');
                     <path class="st2" d="M220,335.4c-2.2-7.4-10-11.7-17.4-9.5c-7.4,2.2-11.7,10-9.5,17.5c2.2,7.4,10,11.7,17.4,9.5
                 C217.9,350.6,222.2,342.8,220,335.4L220,335.4z" />
                     <path class="st3"
@@ -163,10 +165,10 @@
         <div id="rev-gauge-needle-container" class="absolute inset-0 flex items-center justify-center hide">
             <svg viewBox="82.5 100 250 400" class="w-full h-full">
                 <g id="needle-2">
-                <path class="st2" d="M220,335.4c-2.2-7.4-10-11.7-17.4-9.5c-7.4,2.2-11.7,10-9.5,17.5c2.2,7.4,10,11.7,17.4,9.5
+                    <path class="st2" d="M220,335.4c-2.2-7.4-10-11.7-17.4-9.5c-7.4,2.2-11.7,10-9.5,17.5c2.2,7.4,10,11.7,17.4,9.5
                 C217.9,350.6,222.2,342.8,220,335.4L220,335.4z" />
-                <path class="st3"
-                d="M283.3,193.1l4.4,2.4L211,341.8l-8.9-4.8L283.3,193.1z M285.5,194.3 M249.3,268.7 M206.5,339.3 M242.7,265" />
+                    <path class="st3"
+                        d="M283.3,193.1l4.4,2.4L211,341.8l-8.9-4.8L283.3,193.1z M285.5,194.3 M249.3,268.7 M206.5,339.3 M242.7,265" />
                 </g>
             </svg>
         </div>
