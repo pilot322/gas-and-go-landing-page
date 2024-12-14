@@ -14,9 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const rev_needle = document.getElementById('needle2');
     const rev_needle_container = document.getElementById('rev-gauge-needle-container');
     const fuelgaugecontainer = document.getElementById('fuel-gauge-container');
+   
+    const header = document.getElementById('header');
+
     fuelgaugecontainer.classList.add('show');
     // fuelgaugecontainer.classList.remove('hidden'); 
-
+    
     function rotateNeedle(degrees) {
         needle.style.transform = `rotate(${degrees}deg)`;
     }
@@ -70,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
         button1.classList.remove('opacity-0');
         button2.classList.remove('opacity-0');
         button3.classList.remove('opacity-0');
+        header.classList.add('show'); 
     }, initial_offset_ms + 5500);
     startLightsAnimation();
 });
