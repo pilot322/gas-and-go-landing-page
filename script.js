@@ -81,9 +81,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { once: true }); 
 
     setTimeout(()=>{
-        button1.classList.remove('opacity-0');
-        button2.classList.remove('opacity-0');
-        button3.classList.remove('opacity-0');
+        button1.classList.add('show');
+        button2.classList.add('show');
+        button3.classList.add('show');
         lights.forEach((light, index) => {
             light.classList.add('hide');
         })
